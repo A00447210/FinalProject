@@ -62,9 +62,9 @@ namespace PizzaKnight.Controllers
             {
                 _context.Add(paymentInfo);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Create));
+                return RedirectToAction("~Delivery/Create");
             }
-            //ViewData["Custid"] = new SelectList(_context.Customers, "Id", "Id", paymentInfo.CustomerName);
+     
             return View(paymentInfo);
         }
 

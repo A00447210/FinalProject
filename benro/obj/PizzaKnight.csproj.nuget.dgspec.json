@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "\\\\Mac\\Home\\Desktop\\benro\\PizzaKnight.csproj": {}
+    "C:\\Users\\DELL\\Desktop\\MCDA5510_PROJECT\\FinalProject\\benro\\PizzaKnight.csproj": {}
   },
   "projects": {
-    "\\\\Mac\\Home\\Desktop\\benro\\PizzaKnight.csproj": {
+    "C:\\Users\\DELL\\Desktop\\MCDA5510_PROJECT\\FinalProject\\benro\\PizzaKnight.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "\\\\Mac\\Home\\Desktop\\benro\\PizzaKnight.csproj",
+        "projectUniqueName": "C:\\Users\\DELL\\Desktop\\MCDA5510_PROJECT\\FinalProject\\benro\\PizzaKnight.csproj",
         "projectName": "PizzaKnight",
-        "projectPath": "\\\\Mac\\Home\\Desktop\\benro\\PizzaKnight.csproj",
-        "packagesPath": "C:\\Users\\fabianreginold\\.nuget\\packages\\",
-        "outputPath": "\\\\Mac\\Home\\Desktop\\benro\\obj\\",
+        "projectPath": "C:\\Users\\DELL\\Desktop\\MCDA5510_PROJECT\\FinalProject\\benro\\PizzaKnight.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DELL\\Desktop\\MCDA5510_PROJECT\\FinalProject\\benro\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\fabianreginold\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

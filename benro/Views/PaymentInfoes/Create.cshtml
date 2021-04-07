@@ -45,11 +45,9 @@
             </div>
             <div class="form-group">
                 <label asp-for="ExpiryDate" class="control-label"></label>
-                @*<input asp-for="ExpiryDate" class="form-control" />
-        <span asp-validation-for="ExpiryDate" class="text-danger"></span>*@
-                <input type="date" id="ExpiryDate" name="trip-start"
-                       value="20-07-2022"
-                       min="20-01-2020" max="31-12-2025">
+                <input asp-for="ExpiryDate" placeholder="MM-YYYY" class="form-control" />
+                <span asp-validation-for="ExpiryDate" class="text-danger"></span>
+
             </div>
             <div class="form-group">
                 <input type="submit" value="Pay" class="btn btn-primary" />

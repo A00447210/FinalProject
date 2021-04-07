@@ -284,43 +284,27 @@ namespace PizzaKnight.Models
 
             modelBuilder.Entity<PaymentInfo>(entity =>
             {
-                entity.HasKey(e => new { e.Custid, e.Ordid })
+                entity.HasKey(e => new {e.CustomerName })
                     .HasName("PK_payment");
 
-                entity.Property(e => e.Custid).HasColumnName("custid");
+                entity.Property(e => e.CustomerName).HasColumnName("CustomerName");
 
-                entity.Property(e => e.Ordid)
-                    .HasColumnName("ordid")
-                    .HasMaxLength(50);
-
-                entity.Property(e => e.Cardtype)
+                entity.Property(e => e.CardType)
                     .IsRequired()
                     .HasColumnName("cardtype")
-                    .HasMaxLength(1);
+                    .HasMaxLength(10);
 
-                entity.Property(e => e.Cardvalue)
+                entity.Property(e => e.CardValue)
                     .HasColumnName("cardvalue")
                     .HasColumnType("numeric(16, 0)");
 
-                entity.Property(e => e.Cvv)
+                entity.Property(e => e.CVV)
                     .HasColumnName("cvv")
                     .HasColumnType("numeric(3, 0)");
 
-                entity.Property(e => e.Expirydate)
+                entity.Property(e => e.ExpiryDate)
                     .HasColumnName("expirydate")
-                    .HasColumnType("date");
-
-                entity.HasOne(d => d.Cust)
-                    .WithMany(p => p.PaymentInfo)
-                    .HasForeignKey(d => d.Custid)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__PaymentIn__custi__797309D9");
-
-                entity.HasOne(d => d.Ord)
-                    .WithMany(p => p.PaymentInfo)
-                    .HasForeignKey(d => d.Ordid)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__PaymentIn__ordid__787EE5A0");
+                    .HasMaxLength(10);
             });
 
             modelBuilder.Entity<PizzaCust>(entity =>
