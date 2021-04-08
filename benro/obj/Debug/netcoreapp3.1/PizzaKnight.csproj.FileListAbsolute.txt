@@ -387,4 +387,4 @@ C:\Users\DELL\Desktop\MCDA5510_PROJECT\FinalProject\benro\obj\Debug\netcoreapp3.
 C:\Users\DELL\Desktop\MCDA5510_PROJECT\FinalProject\benro\obj\Debug\netcoreapp3.1\PizzaKnight.pdb
 C:\Users\DELL\Desktop\MCDA5510_PROJECT\FinalProject\benro\obj\Debug\netcoreapp3.1\PizzaKnight.genruntimeconfig.cache
 C:\Users\DELL\Desktop\MCDA5510_PROJECT\FinalProject\benro\obj\Debug\netcoreapp3.1\PizzaKnight.csprojAssemblyReference.cache
-C:\Users\DELL\Desktop\MCDA5510_PROJECT\FinalProject\benro\obj\Debug\netcoreapp3.1\Razor\Views\Delivery\Create.cshtml.g.cs
+C:\Users\DELL\Desktop\MCDA5510_PROJECT\FinalProject\benro\obj\Debug\netcoreapp3.1\Razor\Views\Delivery\Delivery.cshtml.g.cs
