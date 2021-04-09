@@ -27,7 +27,7 @@ namespace PizzaKnight.Models
         .FirstOrDefaultAsync(m => m.UserName == UserName);
 
 
-
+     
 
             if (userInfo == null)
             {
@@ -43,8 +43,10 @@ namespace PizzaKnight.Models
                 if (userInfo.Password == Password)
                 {
                     Console.WriteLine("***********" + userInfo.Password);
-                    return RedirectToAction("Index", "PizzaCust");
-                    //Response.Redirect(@"\PizzaCust\Index"); 
+                    ModelState.AddModelError(string.Empty, "The user name or password is incorrect");
+                    return View(userInfo);
+                    //return RedirectToAction("Index", "PizzaCust");
+
                 }
                 //return RedirectToAction("Create", "UserInfoes");
                 ViewBag.Message = "UserName or password is wrong";

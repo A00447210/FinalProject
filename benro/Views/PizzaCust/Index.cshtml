@@ -11,10 +11,24 @@
 
 <h4>All Pizzas</h4>
 
-<div id="PizzaSummaryId">
+<div class="PizzaSummaryId">
     @foreach (var pizza in Model)
     {
         @Html.Partial("PizzaSummary", pizza)
     }
 </div>
 <br />
+
+<style>
+
+    .PizzaSummaryId {
+
+        display: grid;
+
+        grid-template-columns: auto auto auto;
+        height:500px;
+        padding: 10px;
+    }
+    
+
+</style>
