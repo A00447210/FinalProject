@@ -8,8 +8,16 @@ using System.Collections.Generic;
 namespace PizzaKnight.Models
 {
     public partial class UserInfo
+
     {
+        [Display(Name = "Username")]
+        [Required(ErrorMessage = "Username is required")]
+ 
         public string UserName { get; set; }
+        [Display(Name = "Password")]
+        [Required(ErrorMessage = "Password is required")]
+        [DataType(DataType.Password)]
+
         public string Password { get; set; }
         public string Role { get; set; }
     }

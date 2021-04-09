@@ -44,8 +44,8 @@ namespace PizzaKnight.Models
                 {
                     Console.WriteLine("***********" + userInfo.Password);
                     ModelState.AddModelError(string.Empty, "The user name or password is incorrect");
-                    return View(userInfo);
-                    //return RedirectToAction("Index", "PizzaCust");
+                   
+                    return RedirectToAction("Index", "PizzaCust");
 
                 }
                 //return RedirectToAction("Create", "UserInfoes");
