@@ -25,4 +25,12 @@
   <ItemGroup>
     <Folder Include="NewFolder\" />
   </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\register\Create.cshtml" />
+    <None Include="Views\register\Delete.cshtml" />
+    <None Include="Views\register\Details.cshtml" />
+    <None Include="Views\register\Edit.cshtml" />
+    <None Include="Views\register\Index.cshtml" />
+  </ItemGroup>
 </Project>

@@ -174,7 +174,7 @@ namespace PizzaKnight.Models
 
             modelBuilder.Entity<OrderDetail>(entity =>
             {
-                entity.Property(e => e.OrderDetailId).ValueGeneratedNever();
+                entity.Property(e => e.OrderDetailId);
 
                 entity.Property(e => e.PizzaCustId).HasColumnName("pizzaCustId");
 
@@ -276,7 +276,7 @@ namespace PizzaKnight.Models
                 entity.HasKey(e => e.OrderId)
                     .HasName("PK_Order");
 
-                entity.Property(e => e.OrderId).ValueGeneratedNever();
+                entity.Property(e => e.OrderId);
 
                 entity.Property(e => e.AddressLine1)
                     .IsRequired()

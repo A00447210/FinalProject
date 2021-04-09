@@ -5,52 +5,21 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-//
-namespace PizzaKnight.Models
+using PizzaKnight.Models;
+namespace PizzaKnight.Controllers
 {
-    public class UserInfoesController : Controller
+    public class register : Controller
     {
         private readonly _5510Context _context;
 
-        public UserInfoesController(_5510Context context)
+        public register(_5510Context context)
         {
             _context = context;
         }
 
         // GET: UserInfoes
 
-        public async Task<IActionResult> GetDetails(string UserName, String Password)
-        {
-
-
-            var userInfo = await _context.UserInfo
-        .FirstOrDefaultAsync(m => m.UserName == UserName);
-
-
-
-
-            if (userInfo == null)
-            {
-
-                return NotFound();
-            }
-            else
-            {
-
-                Console.WriteLine("............................." + userInfo.Password);
-                if (userInfo.Password == Password)
-                {
-                    Console.WriteLine("***********" + userInfo.Password);
-                    return RedirectToAction("Index", "PizzaCust");
-                    //Response.Redirect(@"\PizzaCust\Index"); 
-                }
-                return NotFound();
-
-
-            }
-
-
-        }
+    
 
         public async Task<IActionResult> Index()
         {
@@ -148,6 +117,14 @@ namespace PizzaKnight.Models
             return View(userInfo);
         }
 
+
+       
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+ 
         // GET: UserInfoes/Delete/5
         public async Task<IActionResult> Delete(string id)
         {
