@@ -58,15 +58,68 @@ namespace PizzaKnight.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("CustomerName,CardType,CardValue,CVV,ExpiryDate")] Models.PaymentInfo paymentInfo)
         {
+
             if (ModelState.IsValid)
             {
-                _context.Add(paymentInfo);
-                await _context.SaveChangesAsync();
-                Response.Redirect(@"\Home\Delivery");
+                int month = Int32.Parse(paymentInfo.ExpiryDate.Substring(0, 2));
+                int year = Int32.Parse(paymentInfo.ExpiryDate.Substring(3, 4));
+                if (month < 13 && month > 0 && year >= 2016 && year <= 2031)
+                {
+                    if (string.Equals(paymentInfo.CardType, "Visa"))
+                    {
 
+                        string isVisa = "^4[0-9]{12}(?:[0-9]{3})?$";
+
+                        if (System.Text.RegularExpressions.Regex.IsMatch(paymentInfo.CardValue, isVisa))
+                        {
+                            _context.Add(paymentInfo);
+                            await _context.SaveChangesAsync();
+                            Response.Redirect(@"\Home\Delivery");
+                        }
+                        else
+                        {
+
+                            ModelState.AddModelError("", "Invalid card details");
+                            return View(paymentInfo);
+                        }
+                    }
+                    else if (string.Equals(paymentInfo.CardType, "MasterCard"))
+                    {
+                        string isMaster = "^(?:5[1-5][0-9]{2}|222[1-9]|22[3-9][0-9]|2[3-6][0-9]{2}|27[01][0-9]|2720)[0-9]{12}$";
+
+                        if (System.Text.RegularExpressions.Regex.IsMatch(paymentInfo.CardValue, isMaster))
+                        {
+                            _context.Add(paymentInfo);
+                            await _context.SaveChangesAsync();
+                            Response.Redirect(@"\Home\Delivery");
+                        }
+                        else
+                        {
+
+                            ModelState.AddModelError("", "Invalid card details");
+                            return View(paymentInfo);
+                        }
+                    }
+                    else
+                    {
+                        string isAmerican = "^3[47][0-9]{13}$";
+                        if (System.Text.RegularExpressions.Regex.IsMatch(paymentInfo.CardValue, isAmerican))
+                        {
+                            _context.Add(paymentInfo);
+                            await _context.SaveChangesAsync();
+                            Response.Redirect(@"\Home\Delivery");
+                        }
+                    }
+
+
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Invalid ExpiryDate");
+                    return View(paymentInfo);
+                }
             }
-
-            return View(paymentInfo);
+             return View(paymentInfo);
         }
 
         // GET: PaymentInfoes/Edit/5

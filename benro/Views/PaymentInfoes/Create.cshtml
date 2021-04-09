@@ -14,8 +14,9 @@
             <div class="form-group">
                 <label asp-for="CardType" class="control-label"></label>
                 <select name="Cardtype" id="Cardtype">
-                    <option value="CreditCard">Credit Card</option>
-                    <option value="DebitCard">Debit Card</option>">
+                    <option value="MasterCard">MasterCard</option>
+                    <option value="Visa">Visa</option>">
+                    <option value="AmericanExpress">American Express</option>">
                 </select>
                 <span asp-validation-for="CardType" class="text-danger"></span>
             </div>
@@ -37,7 +38,8 @@
             </div>
             <div class="form-group">
                 <label asp-for="ExpiryDate" class="control-label"></label>
-                <input asp-for="ExpiryDate" placeholder="MM-YYYY" class="form-control" />
+               <input asp-for="ExpiryDate" placeholder="MM-YYYY" class="form-control" />
+               
                 <span asp-validation-for="ExpiryDate" class="text-danger"></span>
 
             </div>

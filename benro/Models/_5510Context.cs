@@ -331,7 +331,7 @@ namespace PizzaKnight.Models
                     .IsRequired()
                     .HasMaxLength(10);
 
-                entity.Property(e => e.CardValue).HasColumnType("numeric(16, 0)");
+                entity.Property(e => e.CardValue).HasMaxLength(16);
 
                 entity.Property(e => e.CVV)
                     .HasColumnName("CVV")

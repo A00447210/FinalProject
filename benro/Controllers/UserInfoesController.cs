@@ -19,7 +19,7 @@ namespace PizzaKnight.Models
 
         // GET: UserInfoes
 
-        public async Task<IActionResult> GetDetails(string UserName, String Password)
+        public async Task<IActionResult> Details(string UserName, String Password)
         {
 
 

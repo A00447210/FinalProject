@@ -11,7 +11,7 @@ namespace PizzaKnight.Models
     {
         public string CustomerName { get; set; }
         public string CardType { get; set; }
-        public decimal CardValue { get; set; }
+        public string CardValue { get; set; }
         public decimal CVV { get; set; }
         public string ExpiryDate { get; set; }
     }
