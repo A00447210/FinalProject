@@ -61,7 +61,8 @@ namespace PizzaKnight.Controllers
             {
                 _context.Add(userInfo);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Create", "UserInfoes");
+
             }
             return View(userInfo);
         }
