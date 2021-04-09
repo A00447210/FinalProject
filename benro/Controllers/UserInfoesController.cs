@@ -5,9 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using PizzaKnight.Models;
-
-namespace PizzaKnight.Controllers
+//
+namespace PizzaKnight.Models
 {
     public class UserInfoesController : Controller
     {
@@ -19,6 +18,43 @@ namespace PizzaKnight.Controllers
         }
 
         // GET: UserInfoes
+
+        public async Task<IActionResult> GetDetails(string UserName, String Password)
+        {
+
+
+            var userInfo = await _context.UserInfo
+        .FirstOrDefaultAsync(m => m.UserName == UserName);
+
+
+
+
+            if (userInfo != null )
+            {
+                Console.WriteLine("............................." + userInfo.Password);
+                if (userInfo.Password == Password)
+                {
+                    Console.WriteLine("***********" + userInfo.Password);
+                    return RedirectToAction("Index", "PizzaCust");
+                    //Response.Redirect(@"\PizzaCust\Index"); 
+                }
+                //return RedirectToAction("Create", "UserInfoes");
+                ModelState.AddModelError("", "Username or Password is invalid.");
+                return View();
+                //    ViewBag.Message = "UserName or password is Invalid";
+                //    return RedirectToAction("Create", "UserInfoes");
+            }
+            else
+            {
+                ModelState.AddModelError("", "Username or Password is Null.");
+                return View();
+
+
+            }
+
+
+        }
+
         public async Task<IActionResult> Index()
         {
             return View(await _context.UserInfo.ToListAsync());

@@ -62,10 +62,10 @@ namespace PizzaKnight.Controllers
             {
                 _context.Add(paymentInfo);
                 await _context.SaveChangesAsync();
-                //return RedirectToAction("~Delivery/Create");
-               
+                Response.Redirect(@"\Home\Delivery");
+
             }
-     
+
             return View(paymentInfo);
         }
 
@@ -118,7 +118,7 @@ namespace PizzaKnight.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
- 
+
             return View(paymentInfo);
         }
 

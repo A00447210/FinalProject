@@ -10,7 +10,7 @@
 <div>
     <h4>PaymentInfo</h4>
     <hr />
-    @*<dl class="row">
+    <dl class="row">
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.CardType)
         </dt>
@@ -35,14 +35,7 @@
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.ExpiryDate)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Cust)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Cust.Id)
-        </dd class>
-
-    </dl>*@
+    </dl>
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="CustomerName" />

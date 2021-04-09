@@ -14,6 +14,5 @@ namespace PizzaKnight.Models
         public decimal CardValue { get; set; }
         public decimal CVV { get; set; }
         public string ExpiryDate { get; set; }
-
     }
 }
