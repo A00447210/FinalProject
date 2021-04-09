@@ -31,8 +31,10 @@ namespace PizzaKnight.Models
 
             if (userInfo == null)
             {
+      
 
-                return NotFound();
+                ViewBag.Message = "UserName or password is wrong";
+                return RedirectToAction("Create", "UserInfoes");
             }
             else
             {
@@ -44,8 +46,9 @@ namespace PizzaKnight.Models
                     return RedirectToAction("Index", "PizzaCust");
                     //Response.Redirect(@"\PizzaCust\Index"); 
                 }
-                return NotFound();
-
+                //return RedirectToAction("Create", "UserInfoes");
+                ViewBag.Message = "UserName or password is wrong";
+                return RedirectToAction("Create", "UserInfoes");
 
             }
 
