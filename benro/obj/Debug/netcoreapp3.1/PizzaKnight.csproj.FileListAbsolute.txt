@@ -989,3 +989,9 @@ C:\Users\DELL\Desktop\MCDA5510_PROJECT\FinalProject\benro\obj\Debug\netcoreapp3.
 C:\Users\DELL\Desktop\MCDA5510_PROJECT\FinalProject\benro\obj\Debug\netcoreapp3.1\PizzaKnight.dll
 C:\Users\DELL\Desktop\MCDA5510_PROJECT\FinalProject\benro\obj\Debug\netcoreapp3.1\PizzaKnight.pdb
 C:\Users\DELL\Desktop\MCDA5510_PROJECT\FinalProject\benro\obj\Debug\netcoreapp3.1\PizzaKnight.genruntimeconfig.cache
+C:\Users\DELL\Desktop\MCDA5510_PROJECT\FinalProject\benro\obj\Debug\netcoreapp3.1\Razor\Views\CustFeedbacks\Create.cshtml.g.cs
+C:\Users\DELL\Desktop\MCDA5510_PROJECT\FinalProject\benro\obj\Debug\netcoreapp3.1\Razor\Views\CustFeedbacks\Delete.cshtml.g.cs
+C:\Users\DELL\Desktop\MCDA5510_PROJECT\FinalProject\benro\obj\Debug\netcoreapp3.1\Razor\Views\CustFeedbacks\Details.cshtml.g.cs
+C:\Users\DELL\Desktop\MCDA5510_PROJECT\FinalProject\benro\obj\Debug\netcoreapp3.1\Razor\Views\CustFeedbacks\Edit.cshtml.g.cs
+C:\Users\DELL\Desktop\MCDA5510_PROJECT\FinalProject\benro\obj\Debug\netcoreapp3.1\Razor\Views\CustFeedbacks\Index.cshtml.g.cs
+C:\Users\DELL\Desktop\MCDA5510_PROJECT\FinalProject\benro\obj\Debug\netcoreapp3.1\Razor\Views\Shared\bck.cshtml.g.cs

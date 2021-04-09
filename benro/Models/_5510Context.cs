@@ -47,24 +47,16 @@ namespace PizzaKnight.Models
         {
             modelBuilder.Entity<CustFeedback>(entity =>
             {
-                entity.HasKey(e => e.Custid)
+                entity.HasKey(e => e.FirstName)
                     .HasName("PK_custfeedback");
 
-                entity.Property(e => e.Custid)
-                    .HasColumnName("custid")
-                    .ValueGeneratedNever();
-
+     
                 entity.Property(e => e.Feedback).HasMaxLength(1000);
 
                 entity.Property(e => e.FirstName).HasMaxLength(50);
 
                 entity.Property(e => e.LastName).HasMaxLength(50);
 
-                entity.HasOne(d => d.Cust)
-                    .WithOne(p => p.CustFeedback)
-                    .HasForeignKey<CustFeedback>(d => d.Custid)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__CustFeedb__custi__0F624AF8");
             });
 
             modelBuilder.Entity<Customers>(entity =>

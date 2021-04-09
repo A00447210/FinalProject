@@ -26,7 +26,7 @@ namespace PizzaKnight.Models
         public string Phone { get; set; }
         public string Emailaddress { get; set; }
 
-        public virtual CustFeedback CustFeedback { get; set; }
+ 
         public virtual ICollection<OrderList> OrderList { get; set; }
         public virtual ICollection<OrderStatus> OrderStatus { get; set; }
     }
