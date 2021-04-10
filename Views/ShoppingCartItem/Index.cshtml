@@ -45,7 +45,9 @@
 <div align="right">
     @if (Model.ShoppingCartTotal >= 0)
     {
-        <a asp-controller="Orders" asp-action="Checkout" class="btn btn-primary">Check Out</a>
+       
+    <a asp-controller="Customers" asp-action="Create" class="btn btn-primary">Check Out</a>
+    }
     }
 </div>
 <div align="left">
