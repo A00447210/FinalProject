@@ -19,7 +19,7 @@ jobs:
     - name: Set up .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: '5.0.x'
+        dotnet-version: '3.1.301'
 
     - name: Build with dotnet
       run: dotnet build --configuration Release
@@ -52,5 +52,5 @@ jobs:
       with:
         app-name: 'pizzaknight'
         slot-name: 'dev'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_d45cf3611d114a7882e2323032e91ebd }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_77544722d54447b688ecc9f71516dd2c }}
         package: .
